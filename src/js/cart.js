@@ -3,9 +3,15 @@ function getLocalStorage(key) {
 }
 
 function getCartContents() {
-  const cartItems = getLocalStorage("so-cart");
+  const cartItems = [];
+  let cartItem;
+  for (var i = 1, len = localStorage.length; i < len + 1; i++) {
+    cartItem = getLocalStorage(i);
+    cartItems.push(cartItem);
+  }
   const htmlItems = cartItems.map((item) => renderCartItem(item));
   document.querySelector(".product-list").innerHTML = htmlItems.join("");
+
   // document.querySelector(".product-list").innerHTML = renderCartItem(cartItems);
 }
 
