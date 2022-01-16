@@ -1,4 +1,5 @@
 let products = [];
+
 function convertToJson(res) {
   if (res.ok) {
     return res.json();
@@ -11,7 +12,7 @@ function setLocalStorage(key, data) {
   localStorage.setItem(key, JSON.stringify(data));
 }
 
-// get tents data
+//get tents data
 function getProductsData() {
   fetch("../json/tents.json")
     .then(convertToJson)
@@ -21,13 +22,13 @@ function getProductsData() {
 }
 // or should we do it this way?
 // async function getProductsDataAwait() {
-//   products = await fetch("../json/tents.json").then(convertToJson);
+//    products = await fetch("../json/tents.json").then(convertToJson);
 // }
 
 // add to cart button event handler
 function addToCart(e) {
   const product = products.find((item) => item.Id === e.target.dataset.id);
-  setLocalStorage("so-cart", product);
+  setLocalStorage(localStorage.length+1, product);
 }
 
 getProductsData();
