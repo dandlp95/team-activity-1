@@ -1,5 +1,3 @@
-
-
 function getLocalStorage(key) {
   return JSON.parse(localStorage.getItem(key));
 }
@@ -7,11 +5,10 @@ function getLocalStorage(key) {
 function getCartContents() {
   const cartItems = [];
   let cartItem;
-  for ( var i = 1, len = localStorage.length; i < len+1; i++) {
+  for (var i = 1, len = localStorage.length; i < len + 1; i++) {
     cartItem = getLocalStorage(i);
     cartItems.push(cartItem);
   }
-  console.log(cartItems);
   const htmlItems = cartItems.map((item) => renderCartItem(item));
   document.querySelector(".product-list").innerHTML = htmlItems.join("");
 
