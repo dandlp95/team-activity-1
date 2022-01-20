@@ -83,13 +83,20 @@ header {
 
 button {
   padding: 0.5em 2em;
-  background-color: var(--secondary-color);
+  background: linear-gradient(to left, var(--secondary-color) 50%, var(--primary-color) 50%) right;
+  background-size: 200%;
+  transition: 2s ease-out;
   color: white;
   margin: auto;
   display: block;
   border: 0;
   font-size: var(--large-font);
 }
+/* #addToCart:hover {
+  background: var(--primary-color);
+  color: #303030;
+} */
+
 .divider {
   border-bottom: 2px solid var(--primary-color);
 }

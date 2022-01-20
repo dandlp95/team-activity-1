@@ -1,3 +1,5 @@
+import {cartAnimation} from "./cartanimation.js";
+
 let products = [];
 
 function convertToJson(res) {
@@ -29,6 +31,7 @@ function getProductsData() {
 function addToCart(e) {
   const product = products.find((item) => item.Id === e.target.dataset.id);
   setLocalStorage(localStorage.length + 1, product);
+  cartAnimation();
 }
 
 getProductsData();
