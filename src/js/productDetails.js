@@ -1,28 +1,27 @@
 import { setLocalStorage } from "./utils";
 
 export default class ProductDetails {
+  constructor(productId, dataSource) {
+    this.productId = productId;
+    this.product = {};
+    this.dataSource = dataSource;
+  }
 
-    constructor(productId, dataSource) {
-        this.productId = productId;
-        this.product = {};
-        this.dataSource = dataSource;
-    }
+  async init() {
+    this.product = await this.dataSource.findProductById(this.productId);
+    document.querySelector("main").innerHTML = this.renderProductDetails();
 
-    async init() {
+    document
+      .getElementById("addToCart")
+      .addEventListener("click", this.addToCart.bind(this));
+  }
 
-        this.product = await this.dataSource.findProductById(this.productId);
-        document.querySelector("main").innerHTML = this.renderProductDetails();
+  addToCart() {
+    setLocalStorage(localStorage.length + 1, this.product);
+  }
 
-        document.getElementById("addToCart")
-            .addEventListener("click", this.addToCart.bind(this));
-    }
-
-    addToCart() {
-        setLocalStorage(localStorage.length + 1, this.product)
-    }
-
-    renderProductDetails() {
-        return `<section class="product-detail"> <h3>${this.product.Brand.Name}</h3>
+  renderProductDetails() {
+    return `<section class="product-detail"> <h3>${this.product.Brand.Name}</h3>
         <h2 class="divider">${this.product.NameWithoutBrand}</h2>
         <img
           class="divider"
@@ -37,5 +36,5 @@ export default class ProductDetails {
         <div class="product-detail__add">
           <button id="addToCart" data-id="${this.product.Id}">Add to Cart</button>
         </div></section>`;
-    }
+  }
 }

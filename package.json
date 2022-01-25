@@ -23,7 +23,7 @@
     "eslint-plugin-import": "^2.22.1",
     "jest": "^26.6.3",
     "prettier": "^2.1.2",
-    "snowpack": "^2.18.0"
+    "snowpack": "^2.18.5"
   },
   "babel": {
     "presets": [
@@ -36,5 +36,8 @@
     "last 3 opera versions",
     "last 3 ios_saf versions",
     "last 3 safari versions"
-  ]
+  ],
+  "dependencies": {
+    "lint": "^0.7.0"
+  }
 }

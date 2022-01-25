@@ -24,11 +24,10 @@ export function setClick(selector, callback) {
 
 // Added as part of team 2 act.
 export function getParam(params) {
-
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const productInfo = urlParams.get(params);
-  return  productInfo;
+  return productInfo;
 }
 
 // Solution
