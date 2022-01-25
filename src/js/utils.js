@@ -21,3 +21,19 @@ export function setClick(selector, callback) {
   });
   qs(selector).addEventListener("click", callback);
 }
+
+// Added as part of team 2 act.
+export function getParam(params) {
+
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const productInfo = urlParams.get(params);
+  return  productInfo;
+}
+
+// Solution
+// export function getParam(param) {
+//   const queryString = window.location.search;
+//   const urlParams = new URLSearchParams(queryString);
+//   return urlParams.get(param);
+// }
