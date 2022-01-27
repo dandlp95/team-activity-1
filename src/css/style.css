@@ -92,10 +92,11 @@ button {
   border: 0;
   font-size: var(--large-font);
 }
-/* #addToCart:hover {
-  background: var(--primary-color);
-  color: #303030;
-} */
+#addToCart:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.8);
+  color: #a4b8c4;
+}
+
 
 .divider {
   border-bottom: 2px solid var(--primary-color);
@@ -107,6 +108,41 @@ button {
   padding-top: 1em;
   position: relative;
   text-align: center;
+}
+
+@keyframes grow {
+  from {
+    height: 100%;
+    width: 100%;
+  }
+
+  to {
+    height: 300%;
+    width: 300%;
+  }
+}
+
+@keyframes cartWobble {
+  0% {   }
+  10% { transform: rotate(-20deg);}
+  30% { transform: rotate(40deg);}
+  50% { transform: rotate(-40deg);}
+  70% { transform: rotate(40deg);}
+  90% { transform: rotate(-40deg);}
+  100% { transform: rotate(20deg);}
+
+}
+
+.wobbleAnimation {
+  animation-name: cartWobble;
+  animation-duration: 4s;
+}
+
+
+/* The element to apply the animation to */
+.cart svg {
+  width: 100px;
+  height: 100px;
 }
 
 .cart svg {
