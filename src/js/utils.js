@@ -30,9 +30,13 @@ export function getParam(params) {
   return productInfo;
 }
 
-// Solution
-// export function getParam(param) {
-//   const queryString = window.location.search;
-//   const urlParams = new URLSearchParams(queryString);
-//   return urlParams.get(param);
-// }
+export function renderListWithTemplate(template, parentElement, list, callback){
+
+  list.forEach(product => {
+      const clone = template.content.cloneNode(true);
+      const filledTemplate = callback(clone, product);
+      parentElement.appendChild(filledTemplate);
+  })
+}
+
+
