@@ -30,13 +30,15 @@ export function getParam(params) {
   return productInfo;
 }
 
-export function renderListWithTemplate(template, parentElement, list, callback){
-
-  list.forEach(product => {
-      const clone = template.content.cloneNode(true);
-      const filledTemplate = callback(clone, product);
-      parentElement.appendChild(filledTemplate);
-  })
+export function renderListWithTemplate(
+  template,
+  parentElement,
+  list,
+  callback
+) {
+  list.forEach((product) => {
+    const clone = template.content.cloneNode(true);
+    const filledTemplate = callback(clone, product);
+    parentElement.appendChild(filledTemplate);
+  });
 }
-
-
