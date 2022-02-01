@@ -1,8 +1,3 @@
-// import ProductData from "./productData.js";
-
-// const dataSource = new ProductData("tents");
-// const tentsArray = dataSource.getData()
-
 function getLocalStorage(key) {
   return JSON.parse(localStorage.getItem(key));
 }
@@ -19,8 +14,6 @@ function getCartContents() {
 
   const htmlItems = cartItems.map((item, index) => renderCartItem(item, localStorage.key(index)));
   document.querySelector(".product-list").innerHTML = htmlItems.join("");
-
-  // document.querySelector(".product-list").innerHTML = renderCartItem(cartItems);
 }
 
 function renderCartItem(item, key) {
@@ -46,9 +39,6 @@ function renderCartItem(item, key) {
 }
 
 getCartContents();
-
-
-
 
 function addDeleteItemEvent() {
   const deleteButtons = document.querySelectorAll(".deleteButton");
