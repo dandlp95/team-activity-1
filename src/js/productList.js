@@ -39,6 +39,5 @@ export default class productList {
 
   /*Add a method here to filter out the tents that are not supposed to show up in the page*/
   // filterTents(list){
-
   // }
 }
