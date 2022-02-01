@@ -1,10 +1,10 @@
 import ProductData from "./productData.js";
-import ProductList from "./productList";
+import ProductList from "./productList.js";
+import { loadHeaderFooter } from "./utils.js";
+
+loadHeaderFooter();
 
 const dataSource = new ProductData("tents");
-// console.log(dataSource);
-// const products = new ProductList();
-// console.log(products.init());
 
 const targetHtml = document.querySelector(".product-list");
 
