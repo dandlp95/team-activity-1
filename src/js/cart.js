@@ -4,20 +4,6 @@ function getLocalStorage(key) {
   return JSON.parse(localStorage.getItem(key));
 }
 
-function getCartContents() {
-  const cartItems = [];
-  let cartItem;
-
-  for (let i = 0; i < localStorage.length; i++) {
-    let key = localStorage.key(i);
-    cartItem = getLocalStorage(key);
-    cartItems.push(cartItem);
-  }
-
-  const htmlItems = cartItems.map((item, index) => renderCartItem(item, localStorage.key(index)));
-  document.querySelector(".product-list").innerHTML = htmlItems.join("");
-}
-
 function renderCartItem(item, key) {
   const newItem = `<li class="cart-card divider">
   <a href="#" class="cart-card__image">
@@ -40,7 +26,25 @@ function renderCartItem(item, key) {
   return newItem;
 }
 
-getCartContents();
+function getCartContents() {
+  const cartItems = [];
+  let cartItem;
+
+  for (let i = 0; i < localStorage.length; i++) {
+    let key = localStorage.key(i);
+    cartItem = getLocalStorage(key);
+    cartItems.push(cartItem);
+  }
+
+  return cartItems
+}
+
+function displayCartItems(cartItems) {
+  const htmlItems = cartItems.map((item, index) => renderCartItem(item, localStorage.key(index)));
+  document.querySelector(".product-list").innerHTML = htmlItems.join("");
+}
+
+displayCartItems(getCartContents());
 
 function addDeleteItemEvent() {
   const deleteButtons = document.querySelectorAll(".deleteButton");
@@ -70,7 +74,7 @@ function isCartEmpty() {
 }
 
 function calculateTotal() {
-  
+
 }
 
 function displayTotal() {
