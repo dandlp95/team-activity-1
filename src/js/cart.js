@@ -1,3 +1,5 @@
+// const { doc } = require("prettier");
+
 function getLocalStorage(key) {
   return JSON.parse(localStorage.getItem(key));
 }
@@ -54,3 +56,28 @@ function addDeleteItemEvent() {
 }
 
 addDeleteItemEvent();
+
+/**
+ * Cart total functions and function call
+ */
+function isCartEmpty() {
+  if(localStorage.length <= 0) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+function calculateTotal() {
+  
+}
+
+function displayTotal() {
+  const cartFooter = document.querySelector('.cart-footer');
+  if(!isCartEmpty()) {
+    cartFooter.classList.remove('hide');
+  }
+}
+
+displayTotal();

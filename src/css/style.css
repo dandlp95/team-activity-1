@@ -219,3 +219,8 @@ footer {
   font-size: var(--small-font);
   padding: 1em;
 }
+
+/*Total in cart*/
+.hide {
+  display: none;
+}
