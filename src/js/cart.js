@@ -36,11 +36,13 @@ function getCartContents() {
     cartItems.push(cartItem);
   }
 
-  return cartItems
+  return cartItems;
 }
 
 function displayCartItems(cartItems) {
-  const htmlItems = cartItems.map((item, index) => renderCartItem(item, localStorage.key(index)));
+  const htmlItems = cartItems.map((item, index) =>
+    renderCartItem(item, localStorage.key(index))
+  );
   document.querySelector(".product-list").innerHTML = htmlItems.join("");
 }
 
@@ -52,14 +54,14 @@ displayCartItems(getCartContents());
 function addDeleteItemEvent() {
   const deleteButtons = document.querySelectorAll(".deleteButton");
 
-  deleteButtons.forEach(button => {
+  deleteButtons.forEach((button) => {
     button.addEventListener("click", function (e) {
       const key = e.path[0].getAttribute("data-id");
       localStorage.removeItem(key);
       getCartContents();
       location.reload();
-    })
-  })
+    });
+  });
 }
 
 addDeleteItemEvent();
@@ -68,24 +70,24 @@ addDeleteItemEvent();
  * Cart total functions and function call
  */
 function isCartEmpty() {
-  if(localStorage.length <= 0) {
+  if (localStorage.length <= 0) {
     return true;
-  }
-  else {
+  } else {
     return false;
   }
 }
 
 function calculateTotal(cartItems) {
   let total = 0;
-  cartItems.forEach(item => total += item.ListPrice);
+  cartItems.forEach((item) => (total += item.ListPrice));
   return total;
 }
 
 function displayTotal() {
-  document.querySelector('.cart-total').textContent += `$${calculateTotal(getCartContents())}`;
-  document.querySelector('.cart-footer').classList.remove('hide');
+  document.querySelector(".cart-total").textContent += `$${calculateTotal(
+    getCartContents()
+  )}`;
+  document.querySelector(".cart-footer").classList.remove("hide");
 }
 
-if(!isCartEmpty())
-  displayTotal();
+if (!isCartEmpty()) displayTotal();
