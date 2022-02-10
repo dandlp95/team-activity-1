@@ -20,7 +20,6 @@ export default class Alert{
 
     async init() {
         let alerts = await this.readAlerts();        
-        // console.log(alerts);
 
         if (alerts !== false){
 
@@ -59,6 +58,3 @@ export default class Alert{
     }
 
 }
-// const note = document.querySelector('.note');
-// note.style.backgroundColor = 'yellow';
-// note.style.color = 'red';
