@@ -224,3 +224,17 @@ footer {
 .hide {
   display: none;
 }
+
+/*Team Act. 5 */
+/* Grid categories */
+
+#grid-categories{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
+  /* max-width:80%; */
+}
+#grid-categories a{
+  text-decoration: none;
+  color: black;
+}
