@@ -25,7 +25,7 @@ export function setClick(selector, callback) {
   qs(selector).addEventListener("click", callback);
 }
 
-// Added as part of team 2 act.
+// Added as part of team activity 2
 export function getParam(params) {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);

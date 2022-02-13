@@ -12,6 +12,5 @@ const dataSource = new ProductData();
 const listElement = document.querySelector(".product-list");
 
 const myList = new ProductList(category, dataSource, listElement);
-// finally call the init method to show our products
-myList.init();
 
+myList.init();
