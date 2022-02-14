@@ -224,3 +224,13 @@ footer {
 .hide {
   display: none;
 }
+#grid-categories{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
+  /* max-width:80%; */
+}
+#grid-categories a{
+  text-decoration: none;
+  color: black;
+}
