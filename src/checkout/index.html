@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sleep Outside | Checkout</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/checkout.js" type="module"></script>
   </head>
   <body>
     <header class="divider">
@@ -82,22 +83,19 @@
         <fieldset class="order-summary">
           <legend>Order Summary</legend>
 
-          <label for="subtotal">Item Subtotal<span id="itemNumber"></span>
-          </label>
-          <input class="cart-total" name="subtotal" id="subtotal" type="text" disabled>
+          <p>Item Subtotal<span id="itemNumber"></span></p>
+          <p class="cart-total" id="subtotal"> </p>
 
-          <label for="shipping">Shipping Estimate
-          </label>
-          <input name="shipping" id="shipping" type="text" disabled>
+          <p>Shipping Estimate</p>
+          <p id="shipping"> </p>
 
-          <label for="tax">Tax
-          </label>
-          <input name="tax" id="tax" type="text" disabled>
+          <p>Tax</p>
+          <p id="tax"></p>
 
-          <label for="orderTotal">Order Total
-          </label>
-          <input name="orderTotal" id="orderTotal" type="text" disabled>
+          <p>Order Total</p>
+          <p id="orderTotal"> </p>
         </fieldset>
+        <button id="checkoutSubmit">Submit</button>
         </form>
         
       </section>
