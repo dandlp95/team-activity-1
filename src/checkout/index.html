@@ -44,6 +44,63 @@
       <section class="products">
         <h2>Review & Place your Order</h2>
       </section>
+      <section>
+        <form class="checkout-form">
+          <fieldset>
+          <legend>Shipping</legend>
+          <label> First Name
+            <input name="firstName" id="firstName" type="text">
+          </label>
+          <label> Last Name
+            <input name="lastName" id="lastName" type="text">
+          </label>
+          <label> Street
+            <input name="street" id="street" type="text">
+          </label>
+          <label> City
+            <input name="city" id="city" type="text">
+          </label>
+          <label> State
+            <input name="state" id="state" type="text">
+          </label>
+          <label> Zip
+            <input name="zipcode" id="zipcode" type="number">
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Payment</legend>
+          <label> Card number
+            <input name="cardNumber" id="cardNumber" type="number">
+          </label>
+          <label> Expiration
+            <input name="expiration" id="expiration" type="month">
+          </label>
+          <label> Security Code
+            <input name="securityCode" id="securityCode" type="number">
+          </label>
+        </fieldset>
+        <fieldset class="order-summary">
+          <legend>Order Summary</legend>
+
+          <label for="subtotal">Item Subtotal<span id="itemNumber"></span>
+          </label>
+          <input class="cart-total" name="subtotal" id="subtotal" type="text" disabled>
+
+          <label for="shipping">Shipping Estimate
+          </label>
+          <input name="shipping" id="shipping" type="text" disabled>
+
+          <label for="tax">Tax
+          </label>
+          <input name="tax" id="tax" type="text" disabled>
+
+          <label for="orderTotal">Order Total
+          </label>
+          <input name="orderTotal" id="orderTotal" type="text" disabled>
+        </fieldset>
+        </form>
+        
+      </section>
     </main>
     <footer>&copy;NOT a real business</footer>
   </body>
