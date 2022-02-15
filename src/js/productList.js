@@ -10,7 +10,7 @@ export default class productList {
   }
 
   async init() {
-    const list = await this.dataSource.getData();
+    const list = await this.dataSource.getData(this.category);
     //console.log(list);
 
     this.renderList(list);
@@ -18,6 +18,7 @@ export default class productList {
 
   renderList(list) {
     const template = document.querySelector("#product-card-template");
+    
 
     renderListWithTemplate(
       template,
@@ -29,7 +30,7 @@ export default class productList {
 
   prepareTemplate(templateClone, product) {
     templateClone.querySelector("a").href += product.Id;
-    templateClone.querySelector("img").src = product.Image;
+    templateClone.querySelector("img").src = product.Images.PrimaryMedium;
     templateClone.querySelector("img").alt += product.NameWithoutBrand;
     templateClone.querySelector("h3").textContent = product.Brand.Name;
     templateClone.querySelector("h2").textContent = product.Name;
