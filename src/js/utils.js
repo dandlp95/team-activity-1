@@ -69,4 +69,12 @@ export async function loadHeaderFooter() {
   const footerElement = document.getElementById("main-footer");
   renderWithTemplate(header, headerElement);
   renderWithTemplate(footer, footerElement);
+  populateSuperscript();
+}
+
+/**
+ * Cart superscript function
+ */
+ async function populateSuperscript() {
+  document.querySelector("#cart-items-num").textContent = localStorage.length;
 }
