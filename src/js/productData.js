@@ -9,12 +9,12 @@ function convertToJson(res) {
 }
 
 export default class ProductData {
-  constructor() {
-  }
+  constructor() {}
 
   getData(category) {
     return fetch(baseURL + `products/search/${category}`)
-    .then(convertToJson).then((data) => data.Result);
+      .then(convertToJson)
+      .then((data) => data.Result);
   }
 
   async findProductById(id) {
@@ -22,5 +22,4 @@ export default class ProductData {
       .then(convertToJson)
       .then((data) => data.Result);
   }
-
 }

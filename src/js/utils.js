@@ -75,6 +75,6 @@ export async function loadHeaderFooter() {
 /**
  * Cart superscript function
  */
- async function populateSuperscript() {
+async function populateSuperscript() {
   document.querySelector("#cart-items-num").textContent = localStorage.length;
 }

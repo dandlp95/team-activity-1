@@ -81,7 +81,8 @@ header {
   color: var(--tertiary-color);
 }
 
-button, .button{
+button,
+.button {
   padding: 0.5em 2em;
   background-color: var(--secondary-color);
   color: white;
@@ -224,13 +225,13 @@ footer {
 .hide {
   display: none;
 }
-#grid-categories{
-  display:grid;
+#grid-categories {
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   text-align: center;
-  margin-top:3rem;
+  margin-top: 3rem;
 }
-#grid-categories a{
+#grid-categories a {
   text-decoration: none;
   color: black;
 }
@@ -253,22 +254,22 @@ footer {
 }
 
 /*Sign Up Box*/
-#updates form{
+#updates form {
   text-align: center;
-  background-color: rgba(144,238,144,0.4);
-  padding:1rem;
-  width:50%;
-  margin:0 auto;
+  background-color: rgba(144, 238, 144, 0.4);
+  padding: 1rem;
+  width: 50%;
+  margin: 0 auto;
 }
 
-#updates .button{
-  margin-top:0.5rem;
+#updates .button {
+  margin-top: 0.5rem;
 }
 
-#updates label{
-  font-size:1.3rem;
+#updates label {
+  font-size: 1.3rem;
 }
 
-.hide{
-  display:none;
+.hide {
+  display: none;
 }

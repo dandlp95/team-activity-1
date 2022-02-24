@@ -18,7 +18,6 @@ export default class productList {
 
   renderList(list) {
     const template = document.querySelector("#product-card-template");
-    
 
     renderListWithTemplate(
       template,
