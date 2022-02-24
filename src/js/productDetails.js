@@ -5,19 +5,25 @@ export default class ProductDetails {
     this.productId = productId;
     this.product = {};
     this.dataSource = dataSource;
+    this.quantities = {};
   }
 
   async init() {
     this.product = await this.dataSource.findProductById(this.productId);
     document.querySelector("main").innerHTML = this.renderProductDetails();
-    console.log(this.product);
 
     document
       .getElementById("addToCart")
       .addEventListener("click", this.addToCart.bind(this));
   }
 
+  // Added quantity counting to this function
   addToCart() {
+    if (localStorage.getItem(this.product.Id) != null) {
+      this.product.Quantity = this.product.Quantity + 1;
+    } else {
+      this.product.Quantity = 1;
+    }
     setLocalStorage(this.product.Id, this.product);
   }
 
