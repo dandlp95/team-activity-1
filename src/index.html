@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sleep Outside | Home</title>
     <link rel="stylesheet" href="css/style.css" />
-    <script src="../js/main.js" type="module"></script>
+    <script src="js/main.js" type="module"></script>
     <!-- HTML template to build a product card -->
     <template id="product-card-template">
       <li class="product-card">
@@ -41,6 +41,16 @@
           comfortably at an affordable price.
         </p>
       </section>
+      <section id="updates">
+        <button id="signUpButton">Sign Up for Updates!</button>
+        <form method="post" action="registerUpdates" id="updateForm" class="hide">
+          <h3>Stay Up to Date with Our Best Discounts!</h3>
+          <label>
+            Email: <input type="email" name="email">
+          </label>
+          <input class="button" type="submit" name="" value="Register">
+        </form>
+      </section>
       <section id="grid-categories">
         <a id="tent" href="product-listing/index.html?category=tents">
           <img src="https://byui-cit.github.io/wdd330/images/category-icons/noun_Tent_3544767.svg" alt="Tent Icon from Noun Project: Mustofa Bayu">
@@ -61,6 +71,5 @@
       </section>
     </main>
     <footer id="main-footer"></footer>
-    <a href="product-listing/index.html">Product Listing page</a>
   </body>
 </html>
