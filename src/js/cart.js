@@ -1,9 +1,5 @@
 // const { doc } = require("prettier");
-import {getCartContents} from "./utils.js";
-
-function getLocalStorage(key) {
-  return JSON.parse(localStorage.getItem(key));
-}
+import { getCartContents } from "./utils.js";
 
 function renderCartItem(item, key) {
   const newItem = `<li class="cart-card divider">
