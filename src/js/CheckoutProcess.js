@@ -8,6 +8,12 @@ function formDataToJSON(formElement) {
     convertedJSON = {};
 
   formData.forEach(function (value, key) {
+    //our form returns the expiration value in the wrong format
+    //so we need to reverse the order of the year and month
+    if(key == "expiration"){
+      const splitDate = value.split("-");
+      value = splitDate[1] + "-" + splitDate[0]
+    }
     convertedJSON[key] = value;
   });
 
@@ -16,7 +22,7 @@ function formDataToJSON(formElement) {
 
 function packageItems(items) {
   const simplifiedItems = items.map((item) => {
-    console.log(item);
+    // console.log(item);
     return {
       id: item.Id,
       price: item.FinalPrice,
@@ -46,7 +52,7 @@ export default class CheckoutProcess {
       this.calculateOrdertotal();
     }
     async checkout() {
-      const formElement = document.forms['checkout-form'];
+      const formElement = document.forms[0];
   
       const json = formDataToJSON(formElement);
       // add totals, and item details
