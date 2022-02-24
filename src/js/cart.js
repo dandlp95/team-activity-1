@@ -1,4 +1,5 @@
 // const { doc } = require("prettier");
+import {getCartContents} from "./utils.js";
 
 function getLocalStorage(key) {
   return JSON.parse(localStorage.getItem(key));
@@ -24,19 +25,6 @@ function renderCartItem(item, key) {
 </li>
 `;
   return newItem;
-}
-
-function getCartContents() {
-  const cartItems = [];
-  let cartItem;
-
-  for (let i = 0; i < localStorage.length; i++) {
-    let key = localStorage.key(i);
-    cartItem = getLocalStorage(key);
-    cartItems.push(cartItem);
-  }
-
-  return cartItems;
 }
 
 function displayCartItems(cartItems) {
@@ -79,7 +67,7 @@ function isCartEmpty() {
 
 function calculateTotal(cartItems) {
   let total = 0;
-  cartItems.forEach((item) => (total += item.ListPrice));
+  cartItems.forEach((item) => (total += item.ListPrice * item.Quantity));
   return total;
 }
 

@@ -76,5 +76,24 @@ export async function loadHeaderFooter() {
  * Cart superscript function
  */
 async function populateSuperscript() {
-  document.querySelector("#cart-items-num").textContent = localStorage.length;
+  document.querySelector("#cart-items-num").textContent = calculateTotalCartItems();
+}
+
+function calculateTotalCartItems() {
+  let total = 0;
+  getCartContents().forEach(item => total += item.Quantity);
+  return total;
+}
+
+export function getCartContents() {
+  const cartItems = [];
+  let cartItem;
+
+  for (let i = 0; i < localStorage.length; i++) {
+    let key = localStorage.key(i);
+    cartItem = getLocalStorage(key);
+    cartItems.push(cartItem);
+  }
+
+  return cartItems;
 }
