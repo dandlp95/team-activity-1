@@ -56,3 +56,13 @@ export default class Alert {
     }
   }
 }
+
+// Example of what the json file would look like:
+// [
+//   {
+//     "message": "This is only a test",
+//     "backgroundColor": "darkblue",
+//     "color": "white"
+//   }
+// ]
+
