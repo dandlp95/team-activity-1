@@ -5,6 +5,7 @@ export default class ProductDetails {
     this.productId = productId;
     this.product = {};
     this.dataSource = dataSource;
+    this.quantities = {};
   }
 
   async init() {
@@ -17,7 +18,13 @@ export default class ProductDetails {
       .addEventListener("click", this.addToCart.bind(this));
   }
 
+  // Added quantity counting to this function
   addToCart() {
+    if (localStorage.getItem(this.product.Id) != null) {
+      this.product.Quantity = this.product.Quantity + 1;
+    } else {
+      this.product.Quantity = 1;
+    }
     setLocalStorage(this.product.Id, this.product);
   }
 
