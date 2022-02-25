@@ -31,7 +31,11 @@ export default class productList {
     templateClone.querySelector("a").href += product.Id;
     templateClone.querySelector("img").src = product.Images.PrimaryMedium;
     templateClone.querySelector("img").alt += product.NameWithoutBrand;
-    templateClone.querySelector("h3").textContent = product.Brand.Name;
+    // Checks for discounts and marks discounted items with "ON SALE!""
+    if (product.IsClearance) {
+      templateClone.querySelector("#discount").textContent = "ON SALE!";
+    }
+    templateClone.querySelector("#brand").textContent = product.Brand.Name;
     templateClone.querySelector("h2").textContent = product.Name;
     templateClone.querySelector("p").textContent = product.ListPrice;
 
