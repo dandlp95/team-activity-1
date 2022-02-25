@@ -273,3 +273,8 @@ footer {
 .hide {
   display: none;
 }
+
+/*Discount indicator*/
+.card__discount {
+  color: yellowgreen;
+}
