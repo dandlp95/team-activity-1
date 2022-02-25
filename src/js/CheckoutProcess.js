@@ -12,7 +12,7 @@ function formDataToJSON(formElement) {
     //so we need to reverse the order of the year and month
     if(key == "expiration"){
       const splitDate = value.split("-");
-      value = splitDate[1] + "-" + splitDate[0]
+      value = splitDate[1] + "/" + splitDate[0].substring(2);
     }
     convertedJSON[key] = value;
   });
