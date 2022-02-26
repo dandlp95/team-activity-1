@@ -22,6 +22,21 @@ body {
   font-size: var(--font-base);
   color: var(--dark-grey);
 }
+label,
+input {
+  display: block;
+}
+
+.order-summary input {
+  border: none;
+  background-color: white;
+}
+
+.order-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 img {
   max-width: 100%;
 }
