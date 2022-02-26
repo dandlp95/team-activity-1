@@ -65,6 +65,9 @@ export default class CheckoutProcess {
     try {
       const res = await services.checkout(json);
       console.log(res);
+      
+      window.location.href = "http://localhost:8080/checkout/checkedout.html";
+      localStorage.clear();
     } catch (err) {
       console.log(err);
     }
