@@ -22,11 +22,12 @@ body {
   font-size: var(--font-base);
   color: var(--dark-grey);
 }
-label, input{
+label,
+input {
   display: block;
 }
 
-.order-summary input{
+.order-summary input {
   border: none;
   background-color: white;
 }
@@ -34,7 +35,6 @@ label, input{
 .order-summary {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  
 }
 
 img {
