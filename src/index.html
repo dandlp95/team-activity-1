@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sleep Outside | Home</title>
     <link rel="stylesheet" href="css/style.css" />
-    <script src="../js/main.js" type="module"></script>
+    <script src="js/main.js" type="module"></script>
     <!-- HTML template to build a product card -->
     <template id="product-card-template">
       <li class="product-card">
@@ -41,31 +41,53 @@
           comfortably at an affordable price.
         </p>
       </section>
+      <section id="updates">
+        <button id="signUpButton">Sign Up for Updates!</button>
+        <form
+          method="post"
+          action="registerUpdates"
+          id="updateForm"
+          class="hide"
+        >
+          <h3>Stay Up to Date with Our Best Discounts!</h3>
+          <label> Email: <input type="email" name="email" /> </label>
+          <input class="button" type="submit" name="" value="Register" />
+        </form>
+      </section>
       <section id="grid-categories">
         <a id="tent" href="product-listing/index.html?category=tents">
-          <img src="https://byui-cit.github.io/wdd330/images/category-icons/noun_Tent_3544767.svg" alt="Tent Icon from Noun Project: Mustofa Bayu">
+          <img
+            src="https://byui-cit.github.io/wdd330/images/category-icons/noun_Tent_3544767.svg"
+            alt="Tent Icon from Noun Project: Mustofa Bayu"
+          />
           <h3>Tents</h3>
         </a>
         <a id="backpack" href="product-listing/index.html?category=backpacks">
-          <img src="https://byui-cit.github.io/wdd330/images/category-icons/noun_carrier%20bag_3544771.svg" alt="Backpack Icon from Noun Project: Mustofa Bayu">
+          <img
+            src="https://byui-cit.github.io/wdd330/images/category-icons/noun_carrier%20bag_3544771.svg"
+            alt="Backpack Icon from Noun Project: Mustofa Bayu"
+          />
           <h3>Backpacks</h3>
         </a>
-        <a id="sleeping-bag" href="product-listing/index.html?category=sleeping-bags">
-          <img src="https://byui-cit.github.io/wdd330/images/category-icons/noun_Sleeping%20Bag_3544775.svg" alt="Sleeping Bag Icon from Noun Project: Mustofa Bayu">
+        <a
+          id="sleeping-bag"
+          href="product-listing/index.html?category=sleeping-bags"
+        >
+          <img
+            src="https://byui-cit.github.io/wdd330/images/category-icons/noun_Sleeping%20Bag_3544775.svg"
+            alt="Sleeping Bag Icon from Noun Project: Mustofa Bayu"
+          />
           <h3>Sleeping Bags</h3>
         </a>
         <a id="hammock" href="product-listing/index.html?category=hammocks">
-          <img src="https://byui-cit.github.io/wdd330/images/category-icons/noun_Hammock_791143.svg" alt="Hammock Icon from Noun Project: Paul Richard">
+          <img
+            src="https://byui-cit.github.io/wdd330/images/category-icons/noun_Hammock_791143.svg"
+            alt="Hammock Icon from Noun Project: Paul Richard"
+          />
           <h3>Hammocks</h3>
         </a>
       </section>
-      <section class="products">
-        <h2>Top Products</h2>
-        <ul class="product-list">
-        </ul>
-      </section>
     </main>
     <footer id="main-footer"></footer>
-    <a href="product-listing/index.html">Product Listing page</a>
   </body>
 </html>

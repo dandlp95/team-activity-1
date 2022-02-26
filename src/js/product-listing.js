@@ -5,7 +5,6 @@ import { loadHeaderFooter, getParam } from "./utils.js";
 loadHeaderFooter();
 
 const category = getParam("category");
-console.log(category);
 
 const dataSource = new ExternalServices();
 

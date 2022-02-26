@@ -12,22 +12,19 @@ export default class ExternalServices {
   constructor() {
 
   }
+export default class ProductData {
+  constructor() {}
 
   getData(category) {
     return fetch(baseURL + `products/search/${category}`)
-    .then(convertToJson).then((data) => data.Result);
+      .then(convertToJson)
+      .then((data) => data.Result);
   }
 
   async findProductById(id) {
     return await fetch(baseURL + `product/${id}`)
       .then(convertToJson)
       .then((data) => data.Result);
-
-
-    // const products = await this.getData();
-    // console.log(products);
-    // return products.find((item) => item.Id === id);
-    
   }
   async checkout(payload) {
     const options = {

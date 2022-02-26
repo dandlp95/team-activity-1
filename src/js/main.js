@@ -5,3 +5,10 @@ loadHeaderFooter();
 
 const alerts = new Alert("json/alert.json", "main");
 alerts.init();
+
+// Toggle Menu
+function toggleForm() {
+  document.getElementById("updateForm").classList.toggle("hide");
+}
+
+document.getElementById("signUpButton").addEventListener("click", toggleForm);
