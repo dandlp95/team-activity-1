@@ -41,7 +41,7 @@ export default class ProductDetails {
         ${this.product.DescriptionHtmlSimple}
         </p>
         <div class="product-detail__add">
-          <button id="addToCart" data-id="${this.product.Id}">Add to Cart</button>
+          <button class="cartButton "id="addToCart" data-id="${this.product.Id}">Add to Cart</button>
         </div></section>`;
   }
 }
