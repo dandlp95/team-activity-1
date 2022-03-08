@@ -96,6 +96,12 @@ header {
   color: var(--tertiary-color);
 }
 
+.cartButton {
+  background: linear-gradient(to left, var(--secondary-color) 50%, var(--primary-color) 50%) right;
+  background-size: 200%;
+  transition: 2s ease-out;
+}
+
 button,
 .button {
   padding: 0.5em 2em;
@@ -112,6 +118,53 @@ button,
 /* End utility classes */
 
 /* Cart icon styles */
+.cart {
+  padding-top: 1em;
+  position: relative;
+  text-align: center;
+}
+
+@keyframes grow {
+  from {
+    height: 100%;
+    width: 100%;
+  }
+
+  to {
+    height: 300%;
+    width: 300%;
+  }
+}
+
+@keyframes cartWobble {
+  0% {   }
+  10% { transform: rotate(-20deg);}
+  30% { transform: rotate(40deg);}
+  50% { transform: rotate(-40deg);}
+  70% { transform: rotate(40deg);}
+  90% { transform: rotate(-40deg);}
+  100% { transform: rotate(20deg);}
+
+}
+
+.wobbleAnimation {
+  animation-name: cartWobble;
+  animation-duration: 4s;
+}
+
+
+/* The element to apply the animation to */
+.cart svg {
+  width: 100px;
+  height: 100px;
+}
+
+.cart svg {
+  width: 25px;
+}
+.cart:hover svg {
+  fill: gray;
+}
 .cart {
   padding-top: 1em;
   position: relative;
