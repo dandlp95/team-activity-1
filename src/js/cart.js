@@ -1,5 +1,8 @@
 // const { doc } = require("prettier");
 import { getCartContents } from "./utils.js";
+import { loadHeaderFooter, getParam } from "./utils.js";
+
+loadHeaderFooter();
 
 function renderCartItem(item, key) {
   const newItem = `<li class="cart-card divider">

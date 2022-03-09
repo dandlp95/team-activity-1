@@ -11,4 +11,4 @@ function toggleForm() {
   document.getElementById("updateForm").classList.toggle("hide");
 }
 
-document.getElementById("signUpButton").addEventListener("click", toggleForm);
+// document.getElementById("signUpButton").addEventListener("click", toggleForm);
